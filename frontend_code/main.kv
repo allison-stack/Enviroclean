@@ -29,17 +29,20 @@ WindowManager:
 
 <ScreenMLModel>:
     name: "ML"
-    GridLayout:
-        cols: 1
-        Button:
-            background_color: (1.8,2.5,1.68)
-            text: "idk why text can only show up on a button..."
+    RelativeLayout:
+        canvas.before:
+            Color:
+                rgba: 0,255,0,2
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: 'hello'
 
 <ScreenTwo>:
     name: "second"
     GridLayout:
         cols: 2
-        text: "Welcome"
         Button:
             background_color: (1.8,2.5,1.68)
             pos_hint: {'center_x': 0.5}
@@ -284,6 +287,7 @@ WindowManager:
             background_color: (1.8,2.5,1.68)
             pos_hint: {'center_x': 0.5}
             text: "Did you know that glass is 100% recyclable and can be recycled endlessly without loss in quality or purity?"
+            text_size : self.width, None
             pos_hint: {"center_x": .5, "center_y": .5}
 
 <ScreenSix>:
@@ -344,6 +348,7 @@ WindowManager:
             background_color: (1,2,1)
             pos_hint: {'center_x': 0.5}
             text: " Throw your clean cans, bottles and jars into the blue bin and be done with it. The tasks of crushing and label removal are handled by recycling machines. Save your precious time for other things"
+            text_size : self.width, None
             pos_hint: {"center_x": .5, "center_y": .5}
 
 <ScreenSeven>:
@@ -428,7 +433,8 @@ WindowManager:
         Button:
             background_color: (1.8,2.5,1.68)
             pos_hint: {'center_x': 0.5}
-            text: "DId you know: Most medical items go in the garbage! They are biohazards and should not be recycled!"
+            text: "Did you know: Most medical items go in the garbage! They are biohazards and should not be recycled!"
+            text_size : self.width, None
             pos_hint: {"center_x": .5, "center_y": .5}
 
 

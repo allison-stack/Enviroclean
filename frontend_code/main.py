@@ -56,9 +56,9 @@ class MainApp(MDApp):
     def grid_bottom_sheet_newspaper(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/news.png",
-            " Blue bin ": "images/flyer.png",
-            "  Blue bin  ": "images/magazine.png"
+            "Blue bin: Newspaper": "images/news.png",
+            "Blue bin: Flyers": "images/flyer.png",
+            "Blue bin: Magazines": "images/magazine.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -71,9 +71,9 @@ class MainApp(MDApp):
     def grid_bottom_sheet_paper_towel(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/tissue.png",
-            " Garbage ": "images/paper_towel.png",
-            "  Garbage  ": "images/napkin.png"
+            "Garbage: Tissue": "images/tissue.png",
+            "Garbage: Paper towels": "images/paper_towel.png",
+            "Garbage: Napkins": "images/napkin.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -86,8 +86,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_bag(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin (no plastic lining)": "images/paper-bag.png",
-            "Garbage (plastic lining)": "images/stand_bag.png"
+            "Blue bin: Paper bags with no plastic lining": "images/paper-bag.png",
+            "Garbage: Bags with plastic lining": "images/stand_bag.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -100,10 +100,10 @@ class MainApp(MDApp):
     def grid_bottom_sheet_mail(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/ad.png",
-            " Blue bin ": "images/fine_paper.png",
-            "  Blue bin  ": "images/envelope.png",
-            "Garbage": "images/laminated_paper.png"
+            "Blue bin: Mail ads": "images/ad.png",
+            "Blue bin: Printer paper": "images/fine_paper.png",
+            "  Blue bin: Envelopes  ": "images/envelope.png",
+            "Garbage: Laminated paper": "images/laminated_paper.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -115,12 +115,12 @@ class MainApp(MDApp):
     def grid_bottom_sheet_gift_wrap(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin (without inner lining)": "images/wax_cardboard.png",
-            "Garbage (with inner lining)": "images/wax_cardboard.png",
-            " Garbage ": "images/laminated_paper.png",
-            "Blue bin": "images/wrapping_paper.png",
-            " Blue bin ": "images/card.png",
-            "   Blue bin   ": "images/bow.png"
+            "Blue bin: Boxes without inner lining": "images/wax_cardboard.png",
+            "Garbage: Boxes with inner lining": "images/wax_cardboard.png",
+            " Garbage: Shiny wrapping paper ": "images/laminated_paper.png",
+            "Blue bin: Non-shiny wrapping paper": "images/wrapping_paper.png",
+            " Blue bin: Cards ": "images/card.png",
+            "   Blue bin: Bows   ": "images/bow.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -132,7 +132,7 @@ class MainApp(MDApp):
     def grid_bottom_sheet_cartons(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/carton.png"
+            "Blue bin: Milk cartons": "images/carton.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -145,11 +145,11 @@ class MainApp(MDApp):
     def grid_bottom_sheet_wrappers(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/candy.png",
-            " Garbage ": "images/chip.png",
-            "Blue bin": "images/paper_bag.png",
-            " Garbage ": "images/bubble_wrap.png",
-            "  Blue bin  ": "images/ziploc_bag.png",
+            "Garbage: Candy wrappers": "images/candy.png",
+            " Garbage: Chip bags": "images/chip.png",
+            "Blue bin: Paper bags": "images/paper_bag.png",
+            " Garbage: Bubble wrap ": "images/bubble_wrap.png",
+            "  Blue bin: Ziploc bags  ": "images/ziploc_bag.png",
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -161,8 +161,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_bottles_caps(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/bottle.png",
-            " Blue bin ": "images/cap.jpg",
+            "Blue bin: Bottles with caps on": "images/bottle.png",
+            " Blue bin: Bottle caps ": "images/cap.jpg",
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -174,8 +174,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_straws_stoppers(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/straw.png",
-            " Garbage ": "images/stirrer.png",
+            "Garbage: Straws": "images/straw.png",
+            " Garbage: Stirrers ": "images/stirrer.png",
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -187,12 +187,12 @@ class MainApp(MDApp):
     def grid_bottom_sheet_bags(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/grocery.png",
-            " Blue bin ": "images/milk.jpg",
-            "  Blue bin  ": "images/frozen_food.png",
-            "   Blue bin   ": "images/dry_clean.png",
-            "    Blue bin    ": "images/soil.png",
-            "Take to recycling plant": "images/tote.png"
+            "Blue bin: Grocery bags": "images/grocery.png",
+            " Blue bin: Milk bags ": "images/milk.jpg",
+            "  Blue bin: Frozen food bags  ": "images/frozen_food.png",
+            "   Blue bin: Dry cleaning bags   ": "images/dry_clean.png",
+            "    Blue bin: Soil bags    ": "images/soil.png",
+            "Take to recycling plant: Tote bags": "images/tote.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -204,8 +204,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_cutlery(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/cutlery.png",
-            " Garbage ": "images/cutlery_black.png"
+            "Garbage: White cutlery": "images/cutlery.png",
+            " Garbage: Black cutlery ": "images/cutlery_black.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -217,8 +217,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_shampoo(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/shampoo.png",
-            "Take empty bottle to retailer": "images/cosmetics.png"
+            "Blue bin: Shampoo bottle": "images/shampoo.png",
+            "Take empty bottle to retailer: Cosmetics": "images/cosmetics.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -230,9 +230,9 @@ class MainApp(MDApp):
     def grid_bottom_sheet_packaging(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/food_jar.png",
-            "Garbage": "images/glass_bottle.png",
-            " Garbage ": "images/perfume.png"
+            "Blue bin: Food jar": "images/food_jar.png",
+            "Garbage: Milk bottles": "images/glass_bottle.png",
+            " Garbage: Perfume bottles ": "images/perfume.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -244,9 +244,9 @@ class MainApp(MDApp):
     def grid_bottom_sheet_tableware(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/plate.png",
-            " Garbage ": "images/drink_glass.png",
-            "   Garbage   ": "images/bowl.png"
+            "Garbage: Ceramic plates": "images/plate.png",
+            " Garbage: Drinking glasses ": "images/drink_glass.png",
+            "   Garbage: Bowls   ": "images/bowl.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -258,8 +258,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_housing(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/window_glass.png",
-            " Garbage ": "images/facades.png"
+            "Garbage: Window glass": "images/window_glass.png",
+            " Garbage: Facades ": "images/facades.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -271,8 +271,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_interior_design(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/mirror.png",
-            " Garbage ": "images/light_bulb.png"
+            "Garbage: Mirrors": "images/mirror.png",
+            " Garbage: Light bulbs ": "images/light_bulb.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -284,8 +284,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_electronics(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Bring to a drop off depot": "images/smartphone.png",
-            " Bring to a drop off depot ": "images/tv.png"
+            "Bring to a drop off depot: Old smartphones": "images/smartphone.png",
+            " Bring to a drop off depot: Old TVs ": "images/tv.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -297,10 +297,10 @@ class MainApp(MDApp):
     def grid_bottom_sheet_food_products(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin": "images/aluminum_can.png",
-            " Blue bin ": "images/aluminum_tray.png",
-            "  Blue bin  ": "images/cookie_tin.jpg",
-            "   Blue bin   ": "images/cake_pan.jpg"
+            "Blue bin: Aluminum cans": "images/aluminum_can.png",
+            " Blue bin: Aluminum trays ": "images/aluminum_tray.png",
+            "  Blue bin: Cookie tins ": "images/cookie_tin.jpg",
+            "   Blue bin: Cake pans   ": "images/cake_pan.jpg"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -312,10 +312,10 @@ class MainApp(MDApp):
     def grid_bottom_sheet_cans(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Blue bin (if empty and with lid on)": "images/spray_can.png",
-            " Blue bin ": "images/paint_can.png",
-            "Blue bin (paint lid recycled separately)": "images/paint_lid.png",
-            "   Blue bin   ": "images/can.png"
+            "Blue bin: Spray cans (if empty and with lid on)": "images/spray_can.png",
+            " Blue bin: Paint cans ": "images/paint_can.png",
+            "Blue bin: Paint lid": "images/paint_lid.png",
+            "   Blue bin: Cans   ": "images/can.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -327,8 +327,8 @@ class MainApp(MDApp):
     def grid_bottom_sheet_foil(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
-            "Garbage": "images/aluminum_foil.png",
-            " Garbage ": "images/chip_bag.png"
+            "Garbage: Aluminum foil": "images/aluminum_foil.png",
+            " Garbage: Chip bags (with inner lining) ": "images/chip_bag.png"
         }
         for item in data.items():
             bottom_sheet_menu.add_item(
@@ -443,8 +443,5 @@ class MainApp(MDApp):
     def build(self):
         self.title = 'EnviroClean'
         return kv
-
-
-
 
 MainApp().run()
