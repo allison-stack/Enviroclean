@@ -13,12 +13,12 @@ from kivy.uix.tabbedpanel import TabbedPanel
 from kivymd.uix.bottomsheet import MDListBottomSheet
 from kivymd.toast import toast
 from kivymd.uix.bottomsheet import MDGridBottomSheet
-from pyzbar import pyzbar
-from bs4 import BeautifulSoup
-import requests
 import cv2
 from pyzbar import pyzbar
-
+import requests
+from bs4 import BeautifulSoup
+import urllib.request
+from PIL import Image
 
 
 class ScreenOne(Screen, TabbedPanel):
@@ -445,6 +445,13 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    def find_nth(haystack, needle, n):
+        start = haystack.find(needle)
+        while start >= 0 and n > 1:
+            start = haystack.find(needle, start + len(needle))
+            n -= 1
+        return start
+
     def read_barcodes(self, frame):
         # array of barcodes, decode frame which is camera
         barcodes = pyzbar.decode(frame)
@@ -474,10 +481,13 @@ class MainApp(MDApp):
             for img in images:
                 if img.has_attr('alt'):
                     if img['alt'] == alt:
-                        print(url)
-                        print(img)
-                        with open("imgsrc.txt", 'a') as file:
-                            file.write(img['data-src'])
+                        dataSrc = img['data-src']
+                        filename = "_SL150_.jpg"
+                        urllib.request.urlretrieve(dataSrc, filename)
+
+                        img = Image.open(filename)
+                        img.show()
+
         return frame
 
     def main(self):
