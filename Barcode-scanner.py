@@ -2,6 +2,15 @@ import cv2
 from pyzbar import pyzbar
 import requests
 from bs4 import BeautifulSoup
+import urllib.request
+from PIL import Image
+
+def find_nth(haystack, needle, n):
+        start = haystack.find(needle)
+        while start >= 0 and n > 1:
+            start = haystack.find(needle, start+len(needle))
+            n -= 1
+        return start
 
 def read_barcodes(frame):
 #array of barcodes, decode frame which is camera
@@ -31,10 +40,13 @@ def read_barcodes(frame):
    for img in images:
     if img.has_attr('alt'):
       if img['alt'] == alt:
-        print(url)
-        print(img)
-        with open("imgsrc.txt",'a') as file:
-          file.write(img['data-src'])
+        dataSrc = img['data-src']
+        filename = "_SL150_.jpg"
+        urllib.request.urlretrieve(dataSrc,filename)
+
+        img = Image.open(filename)
+        img.show()
+
 
 
   return frame
