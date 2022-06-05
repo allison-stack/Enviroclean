@@ -63,7 +63,6 @@ test_generator =  test_datagen.flow_from_directory(test_dir,
                                                          class_mode='binary',
                                                          target_size=(150, 150))
 
-
 history = model.fit(
             train_generator, #training generator
             steps_per_epoch=100,
@@ -73,4 +72,5 @@ history = model.fit(
             verbose=2
             )
 
+#saving the trained model to be used in the final Application
 model.save("classified model")
