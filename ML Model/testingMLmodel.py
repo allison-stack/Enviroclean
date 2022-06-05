@@ -4,7 +4,7 @@ from keras.preprocessing import image
 
 model = models.load_model("classified model")
 
-img = image.load_img('Hydro-Flask-Water-Bottle-1.jpg', target_size=(150,150))
+img = image.load_img('bottle.jpg', target_size=(150,150))
 
 x = image.img_to_array(img)
 x /= 255
