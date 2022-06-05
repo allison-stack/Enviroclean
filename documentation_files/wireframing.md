@@ -1,4 +1,4 @@
-Wireframing (interactivity included):
+# Wireframing (interactivity included):
 
 Log:
 - As part of the project plan review I designed the main screen and different pages featuring different functionalities. 
