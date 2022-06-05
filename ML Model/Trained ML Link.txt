@@ -1,3 +1,6 @@
-Trained ML Model - obtained by runnning the file named TrainingMLmodel.py
+Link for original Dataset from Kaggle used to Test and Train the model
+https://www.kaggle.com/datasets/techsash/waste-classification-data
 
+
+Trained ML Model is saved in link below - obtained by runnning the file named createdMLmodel.py
 https://drive.google.com/file/d/1QvaCqVjODO2Xef_FQCIXPqhh_jtvsxEp/view?usp=sharing
