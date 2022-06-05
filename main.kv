@@ -1,0 +1,436 @@
+WindowManager:
+    ScreenOne:
+    ScreenTwo:
+    ScreenMLModel:
+    ScreenThree:
+    ScreenFour:
+    ScreenFive:
+    ScreenSix:
+    ScreenSeven:
+    ScreenEight:
+
+<ScreenOne>:
+    name: "first"
+    do_default_tab: False
+    TabbedPanelItem:
+        text: "Welcome"
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                background_color: (1.8,2.5,1.68)
+                pos_hint: {'center_x': 0.5}
+                text: "I want to scan something"
+                on_release: app.root.current = "ML"
+            Button:
+                background_color: (1.8,2.2,1.68)
+                pos_hint: {'center_x': 0.5}
+                text: "No barcode?"
+                on_release: app.root.current = "second"
+
+<ScreenMLModel>:
+    name: "ML"
+    Button:
+        background_color: (1.8,2.2,1.68)
+        pos_hint: {'center_x': 0.5}
+        text: "No barcode? Click me!"
+        on_release: app.main()
+
+<ScreenTwo>:
+    name: "second"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "paper"
+            on_release: app.root.current = "paper"
+            Image:
+                source:'images/carton-icon-24.jpg'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.2,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "glass"
+            on_release: app.root.current = "glass"
+            Image:
+                source:'images/glass.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.2,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "plastic"
+            on_release: app.root.current = "three"
+            Image:
+                source:'images/plastic_bag.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "metal"
+            on_release: app.root.current = "metal"
+            Image:
+                source:'images/soda_can.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "organics"
+            on_release: app.root.current = "organics"
+            Image:
+                source:'images/fruit-icon-png-25.jpg'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.2,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "medical"
+            on_release: app.root.current = "medical"
+            Image:
+                source:'images/medicine_bottle.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+<ScreenThree>:
+    name: "three"
+    GridLayout:
+        cols: 2
+        text: "Welcome"
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Food wrappers"
+            on_release: app.grid_bottom_sheet_wrappers()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/plastic_wrapper.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Bottles and caps"
+            on_release: app.grid_bottom_sheet_bottles_caps()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/soda-bottle-icon.jpg'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Straws and stoppers"
+            on_release: app.grid_bottom_sheet_straws_stoppers()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/straws.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Grocery bags"
+            on_release: app.grid_bottom_sheet_bags()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/plastic_bag.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Plastic cutlery"
+            on_release: app.grid_bottom_sheet_cutlery()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/plastic_cutlery.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Shampoo bottles"
+            on_release: app.grid_bottom_sheet_shampoo()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/shampoo_bottle.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+<ScreenFour>:
+    name: "paper"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Newspapers"
+            on_release: app.grid_bottom_sheet_newspaper()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/news.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Paper towels"
+            on_release: app.grid_bottom_sheet_paper_towel()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/paper_towel.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Bags"
+            on_release: app.grid_bottom_sheet_bag()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/paper_bag.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Mail"
+            on_release: app.grid_bottom_sheet_mail()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/mail.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Gift wrap"
+            on_release: app.grid_bottom_sheet_gift_wrap()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/gift_wrap.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Cartons"
+            on_release: app.grid_bottom_sheet_cartons()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/carton-icon-24.jpg'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+<ScreenFive>:
+    name: "glass"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Packaging"
+            on_release: app.grid_bottom_sheet_packaging()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/food_jar.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Tableware"
+            on_release: app.grid_bottom_sheet_tableware()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/tableware.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Housing"
+            on_release: app.grid_bottom_sheet_housing()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/housing.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Interior design"
+            on_release: app.grid_bottom_sheet_interior_design()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/interior_design.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Electronics"
+            on_release: app.grid_bottom_sheet_electronics()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/electronics.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Did you know that glass is 100% recyclable and can be recycled endlessly without loss in quality or purity?"
+            text_size : self.width, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+<ScreenSix>:
+    name: "metal"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Food products"
+            on_release: app.grid_bottom_sheet_food_products()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/food_jar.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Cans"
+            on_release: app.grid_bottom_sheet_cans()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/can.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Food foil"
+            on_release: app.grid_bottom_sheet_foil()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/aluminium-paper.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Blister packs"
+            on_release: app.grid_bottom_sheet_packaging()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/blister-pack.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Electronics"
+            on_release: app.grid_bottom_sheet_electronics()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/electronics.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: " Throw your clean cans, bottles and jars into the blue bin and be done with it. The tasks of crushing and label removal are handled by recycling machines. Save your precious time for other things"
+            text_size : self.width, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+<ScreenSeven>:
+    name: "organics"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Food waste"
+            on_release: app.grid_bottom_sheet_food_waste()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/waste.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Paper napkins and towels"
+            on_release: app.grid_bottom_sheet_napkins_towels()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/paper_towel.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Food containers"
+            on_release: app.grid_bottom_sheet_food_container()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/box.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Waste"
+            on_release: app.grid_bottom_sheet_waste()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/dump.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+<ScreenEight>:
+    name: "medical"
+    GridLayout:
+        cols: 2
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Disposable PPE items"
+            on_release: app.grid_bottom_sheet_disposable_safety_items()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/protective-clothing.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Soiled items"
+            on_release: app.grid_bottom_sheet_soiled_items()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/virus.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1,2,1)
+            pos_hint: {'center_x': 0.5}
+            text: "Hospital and clinic tools"
+            on_release: app.grid_bottom_sheet_hospital_clinic_items()
+            pos_hint: {"center_x": .5, "center_y": .5}
+            Image:
+                source:'images/hospital.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+        Button:
+            background_color: (1.8,2.5,1.68)
+            pos_hint: {'center_x': 0.5}
+            text: "Did you know: Most medical items go in the garbage! They are biohazards and should not be recycled!"
+            text_size : self.width, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+
