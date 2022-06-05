@@ -7,8 +7,7 @@ INSTALLATION INSTRUCTIONS:
 6. Now you can run the program on PyCharm (using the green play button near the top right corner of the screen)!
 
 HOW FILES WERE SHARED BETWEEN GROUP MEMBERS 
-Files were posted on this collaborative repository, then converted into a shared google drive including classified model (the machine learning model used to classify 
-scanned barcodes, main.py and images (used as icons)
+Files were posted on this collaborative repository, then converted into a shared google drive including classified model (the machine learning model used to classify scanned barcodes, main.py and images (used as icons)
 
 USER INSTRUCTIONS
 After running main.py, user will be directed to page below:
