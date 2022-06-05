@@ -10,6 +10,4 @@ Log:
 Next steps:
 - Learn how to and design frontend of the app
   
-By:
-- Allison Zhao 
-- 02/22/2022 and 02/23/2022
+By: Allison Zhao - 02/22/2022 and 02/23/2022
