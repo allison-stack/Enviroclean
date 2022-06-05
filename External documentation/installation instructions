@@ -3,5 +3,6 @@ INSTALLATION INSTRUCTIONS:
 2. Download PyCharm (the software that will be running the program) at: https://www.jetbrains.com/pycharm/download/#section=windows
 3. Download all files in the EnvrioClean Github repository
 4. Open up main.py and main.kv files with PyCharm
-5. Install libraries: by typing: 'pip install kivy' , 'pip install kivymd' , 'pip install pyzbar' , 'pip install Pillow' , 'pip install opencv-python' , 'pip install beautifulsoup4' into the PyCharm terminal separately
+5. Install libraries: by typing: 'pip install kivy' , 'pip install kivymd' , 'pip install pyzbar' , 'pip install Pillow' , 'pip install opencv-python' , 'pip install beautifulsoup4', 'pip install keras' , 'pip install tensorflow' into the PyCharm terminal separately
 6. Now you can run the program on PyCharm (using the green play button near the top right corner of the screen)!
+
