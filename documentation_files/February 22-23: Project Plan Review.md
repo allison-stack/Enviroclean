@@ -1,4 +1,4 @@
-Project Plan Review:
+# Project Plan Review:
 
 Log:
 - As part of the project plan review I briefed over our Software Development Calendar 
@@ -14,5 +14,5 @@ Next steps:
   when working on this project in the future.
   
 
-- Allison Zhao 
+Allison Zhao 
 - 02/22/2022 and 02/23/2022
