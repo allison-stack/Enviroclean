@@ -15,7 +15,7 @@ Files were posted on this collaborative repository, then converted into a shared
 After running main.py, user will be directed to page below:
 ![image](https://user-images.githubusercontent.com/100422268/172062849-a1f939a6-1290-4c1a-8a04-137cc52346c9.png)
 If you have an item to scan, click the top option: I want to scan something, to open the camera. Then place your item's barcode close to the camera. Ensure your local environment has good lighting. 
-If you do not have an item to scan, click no barcode. Then, 
+If you do not have an item to scan, click no barcode. Then, a menu of different types of recyclable items will pop up, choose according to product at hand.
 
 ## NOTES 
 
