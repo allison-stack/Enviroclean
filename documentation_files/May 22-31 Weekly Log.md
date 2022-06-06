@@ -16,17 +16,17 @@
 
 # May 28-29:
 - managed to make buttons working along with screen transitions
-- put all the icons in and the recycalbility of each icon item in each category
+- put all the icons in and the recyclability of each icon item in each category
 
 # May 30:
-- work on color palette 
+- worked on color palette of the app
 - adjust the positioning of the labelling fonts
 - used coolers to find a color scheme
-- note: light green: 0,2,0.9
+- personal note: light green: 0,2,0.9
 
 # May 31:
 - uploaded front end code to github
-- the front end code will be merged with the backend code starting from today
+- the front end code will be merged with the backend code (scanner and machine learning model code) starting from today
 - will try to make continuous improvements on the frontend code (make the frontend more aesthetic, etc.)
 
 Allison Zhao
