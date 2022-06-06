@@ -1,4 +1,4 @@
-# HELP PAGE
+# HELP PAGE (FAQs):
 
 - Problem: ModuleNotFound error in terminal after attempting to run the program?
   - Solution: import the missing library by typing in 'pip install [module name]' in the PyCharm terminal
@@ -11,3 +11,5 @@
 
 - Problem: How do I use this app?
   - Solution: Well, it's just a bunch of buttons... Click the buttons until you land on what you want. If you misclick, no worries just rerun the program again.
+
+If any other problems arise that are not on this list, please contact one of the project devs.
