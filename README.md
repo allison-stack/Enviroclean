@@ -14,8 +14,11 @@ Catalogue Variety: Application has a variety of household items listed in the ca
 # Tech Stack
 
 Frontend: Kivy
+
 Backend: OpenCV, Pyzbar and BeautifulSoup
+
 Machine Learning: TensorFlow, Keras, Google Colab
+
 Dataset: Kaggle
 
 # More Information
@@ -24,7 +27,8 @@ Please go to the respective directory to ibtain more information about the produ
 
 # Problems
 
-Android: Unable to test the application as no one in the group owns an Android device
+Android: Unable to test the application as no one in the group owns an Android device.
+
 IOS: Unable to test the application as did not have budget and time for the application to be verfied on the App Store.
 
 # Application Demo
