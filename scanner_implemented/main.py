@@ -1,4 +1,3 @@
-
 from kivy.app import App
 from kivy.factory import Factory
 from kivy.lang import Builder
@@ -20,44 +19,60 @@ from bs4 import BeautifulSoup
 import urllib.request
 from PIL import Image
 
+import numpy as np
+from tensorflow.keras import models
+from keras.preprocessing import image
 
+# Classes for different screens to appear on the app
 class ScreenOne(Screen, TabbedPanel):
+    # kivy will be used to design the screens, check main.kv to see what will the screen will look like and functionalities
     pass
+
+
 class ScreenTwo(Screen):
     pass
+
+
 class ScreenMLModel(Screen):
     pass
+
+
 class ScreenThree(Screen):
     pass
+
+
 class ScreenFour(Screen):
     pass
+
+
 class ScreenFive(Screen):
     pass
+
+
 class ScreenSix(Screen):
     pass
+
+
 class ScreenSeven(Screen):
     pass
+
+
 class ScreenEight(Screen):
     pass
+
 
 class WindowManager(ScreenManager):
     pass
 
+
 kv = Builder.load_file('main.kv')
 
-class MyLayout(TabbedPanel):
-    background_color = (0, 1, 0, .5)
-    def build(self):
-        pass
-
-class TouchApp(App):
-    def build(self):
-        return Screen()
 
 class MainApp(MDApp):
+    # returns the item name and whether or not it is recyclable when icon in a grid_bottom_sheet is clicked
     def callback_for_menu_items(self, *args):
         toast(args[0])
-
+    # icons for newspaper section under 'paper'
     def grid_bottom_sheet_newspaper(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -73,6 +88,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for paper towel section under 'paper'
     def grid_bottom_sheet_paper_towel(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -88,6 +104,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for bag section under 'paper'
     def grid_bottom_sheet_bag(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -102,6 +119,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for mail section under 'paper'
     def grid_bottom_sheet_mail(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -117,6 +135,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for gift wrap section under 'paper'
     def grid_bottom_sheet_gift_wrap(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -134,6 +154,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for carton section under 'paper'
     def grid_bottom_sheet_cartons(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -147,6 +169,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for wrapper section under 'plastic'
     def grid_bottom_sheet_wrappers(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -163,6 +186,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for bottles and caps section under 'plastic'
     def grid_bottom_sheet_bottles_caps(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -176,6 +201,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for straws and stoppers section under 'plastic'
     def grid_bottom_sheet_straws_stoppers(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -189,6 +216,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for bags section under 'plastic'
     def grid_bottom_sheet_bags(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -206,6 +235,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for cutlery section under 'plastic'
     def grid_bottom_sheet_cutlery(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -219,6 +250,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for shampoo section under 'plastic'
     def grid_bottom_sheet_shampoo(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -232,6 +265,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for packaging section under 'glass'
     def grid_bottom_sheet_packaging(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -246,6 +281,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for wrapper section under 'glass'
     def grid_bottom_sheet_tableware(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -260,6 +297,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for housing section under 'glass'
     def grid_bottom_sheet_housing(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -273,6 +312,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for interior section under 'glass'
     def grid_bottom_sheet_interior_design(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -286,6 +327,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for electronics section under 'glass'
     def grid_bottom_sheet_electronics(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -299,6 +342,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for food products section under 'metal'
     def grid_bottom_sheet_food_products(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -314,6 +359,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for cans section under 'metal'
     def grid_bottom_sheet_cans(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -329,6 +376,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for foil section under 'metal'
     def grid_bottom_sheet_foil(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -343,6 +392,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for food waste section under 'organics'
     def grid_bottom_sheet_food_waste(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -359,6 +409,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for napkins and towels section under 'organics'
     def grid_bottom_sheet_napkins_towels(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -373,6 +425,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for food container section under 'organics'
     def grid_bottom_sheet_food_container(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -387,6 +441,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for waste section under 'organics'
     def grid_bottom_sheet_waste(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -402,6 +458,7 @@ class MainApp(MDApp):
             )
         bottom_sheet_menu.open()
 
+    # icons for disposable safety items section under 'medical'
     def grid_bottom_sheet_disposable_safety_items(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -416,6 +473,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for soiled items section under 'medical'
     def grid_bottom_sheet_soiled_items(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -430,6 +489,8 @@ class MainApp(MDApp):
                 icon_src=item[1],
             )
         bottom_sheet_menu.open()
+
+    # icons for hospital/clinic items section under 'medical'
     def grid_bottom_sheet_hospital_clinic_items(self):
         bottom_sheet_menu = MDGridBottomSheet()
         data = {
@@ -478,6 +539,7 @@ class MainApp(MDApp):
             images = soup.find_all('img')
             alt = "upc " + variable + " product image"
 
+            list = []
             for img in images:
                 if img.has_attr('alt'):
                     if img['alt'] == alt:
@@ -487,6 +549,20 @@ class MainApp(MDApp):
 
                         img = Image.open(filename)
                         img.show()
+
+                        model = models.load_model("classified model")
+                        img = image.load_img(filename, target_size=(150, 150))
+                        x = image.img_to_array(img)
+                        x /= 255
+                        x = np.expand_dims(x, axis=0)
+                        images = np.vstack([x])
+
+                        classes = model.predict(images, batch_size=10)
+
+                        if classes[0] > 0.5:
+                            self.add_widget("Recycle")
+                        else:
+                            self.add_widget("Organic")
 
         return frame
 
